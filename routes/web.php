@@ -1,13 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\State;
 
 Route::get('/',function(){
     return View('frontend.home');
 });
 
 Route::get('/seo-service',function(){
-    return View('frontend.seo-services');
+    $data = State::all();
+    return View('frontend.seo-services', compact('data'));
 })->name('seo-service');
 
 Route::get('/website-development',function(){

@@ -31,12 +31,12 @@ p{
 <section class="section " style="padding-top:120px !important;" id="ban">
 <h1 class="hero-title">
 SEO Services 
-<span class="highlight">in Tilak Nagar, Delhi</span><br>
+<span class="highlight"></span><br>
 That Rank Your Business on Google & Maps
 </h1>
 
 <p style="max-width:700px;margin-top:20px;font-size:18px">
-We provide result-driven <strong>SEO services in Tilak Nagar</strong> helping local businesses rank on Google Search and Google Maps for high-intent “near me” keywords that bring real calls and enquiries every day.
+We provide result-driven <strong>SEO services </strong> helping local businesses rank on Google Search and Google Maps for high-intent “near me” keywords that bring real calls and enquiries every day.
 </p>
 
 
@@ -45,7 +45,7 @@ We provide result-driven <strong>SEO services in Tilak Nagar</strong> helping lo
 
 <!-- SERVICES -->
 <section class="section">
-<h2>Our SEO Services in Tilak Nagar</h2>
+<h2>Our SEO Services </h2>
 <div class="cards">
 
 <div class="card">
@@ -114,9 +114,89 @@ With continuous SEO improvements and tracking, we ensure long-term ranking, traf
 
 <!-- AREAS -->
 
+<section class="service-section">
+        <h1 class="service-title">Our Service Locations</h1>
+        <div class="locations-container">
+          @foreach($data as $loc)
+            <div class="location-item">
+                <!-- Rajasthan desert image (file:1) -->
+                <img src="{{asset('storage/'.$loc->state_image)}}" alt="{{$loc->state}}" class="location-img">
+                <div class="location-label">{{Strtoupper($loc->state)}}</div>
+            </div>
+       @endforeach
+        </div>
+    </section>
+    <style>
+
+        .service-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #6366f1; /* Purple-blue jaise design mein */
+            margin: 0 0 50px 0;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        .locations-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .location-item {
+            position: relative;
+            width: 320px;
+            height: 420px;
+        }
+
+        .location-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5)); /* Heavy shadow jaise design */
+        }
+
+        .location-label {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        @media (max-width: 768px) {
+            .locations-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+            
+            .location-item {
+                width: 280px;
+                height: 360px;
+            }
+        }
+    </style>
+
  
 <section class="section">
-<h2><span class="highlight">SEO Services in Tilak Nagar, West Delhi</span></h2>
+<h2><span class="highlight">SEO Services in West Delhi</span></h2>
 <p>
 If you are searching for SEO services in Tilak Nagar, we help your business rank on Google Search and Google Maps so customers can find you easily when they search for services near them.
 </p>
