@@ -1,6 +1,11 @@
 @extends('frontend.layouts')
-@push('title','Website Development in Tilak Nagar Delhi | Professional Business Websites')
+@push('title','Website Development in Delhi | Professional Business Websites')
 @push('des','Looking for website development in Tilak Nagar? We build fast, mobile-friendly, SEO-optimized websites for businesses in Tilak Nagar, Janakpuri, Uttam Nagar and West Delhi that generate real enquiries')
+
+@push('canon')
+{{route('website-development')}}
+@endpush
+
 @section('content')
 <style>
 
@@ -32,12 +37,12 @@ p{
 <section class="section " style="padding-top:120px !important;" id="ban">
 <h1 class="hero-title">
 Website Development 
-<span class="highlight">in Tilak Nagar, Delhi</span><br>
+<span class="highlight">in Delhi</span><br>
 That Converts Visitors into Customers
 </h1>
 
 <p style="max-width:700px;margin-top:20px;font-size:18px">
-We design and develop fast, mobile-friendly, and SEO-optimized websites for local businesses in Tilak Nagar that help generate real enquiries, calls, and customers from Google.
+We design and develop fast, mobile-friendly, and SEO-optimized websites for local businesses in Delhi that help generate real enquiries, calls, and customers from Google.
 </p>
 
 
@@ -47,7 +52,7 @@ We design and develop fast, mobile-friendly, and SEO-optimized websites for loca
 
 <!-- SERVICES -->
 <section class="section">
-<h2>Our Website Development Services in Tilak Nagar</h2>
+<h2>Our Website Development Services in Delhi</h2>
 
 <div class="cards">
 
@@ -118,11 +123,92 @@ Whether you need a business website, portfolio, or service website — we create
 
 <!-- AREAS -->
 
+<!-- AREAS -->
+
+<section class="service-section">
+        <h1 class="service-title">Our Service Locations</h1>
+        <div class="locations-container">
+          @foreach($data as $loc)
+            <div class="location-item">
+                <!-- Rajasthan desert image (file:1) -->
+                <img style="height:250px;width:100%;object-fit:cover" src="{{asset('storage/'.$loc->state_image)}}" alt="{{$loc->state}}" class="location-img">
+                <div class="location-label">{{Strtoupper($loc->state)}}</div>
+            </div>
+       @endforeach
+        </div>
+    </section>
+    <style>
+
+        .service-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #6366f1; /* Purple-blue jaise design mein */
+            margin: 0 0 50px 0;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        .locations-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .location-item {
+            position: relative;
+                width: 412px;
+    height: 250px;
+        }
+
+        .location-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5)); /* Heavy shadow jaise design */
+        }
+
+        .location-label {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        @media (max-width: 768px) {
+            .locations-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+            
+            .location-item {
+               width: 90vw;
+        height: 255px;
+            }
+        }
+    </style>
  
 <section class="section">
-<h2><span class="highlight">Website Development in Tilak Nagar, West Delhi</span></h2>
+<h2><span class="highlight">Website Development in Delhi.</span></h2>
 <p>
-If you are searching for website development in Tilak Nagar, we create professional websites that help your business get found on Google and generate enquiries.
+If you are searching for website development in Delhi, we create professional websites that help your business get found on Google and generate enquiries.
 </p>
 <p>
 We serve businesses in Tilak Nagar, Janakpuri, Uttam Nagar, Rajouri Garden, Dwarka, and nearby West Delhi areas.
@@ -138,7 +224,7 @@ border-top:1px solid rgba(255,255,255,0.08);
 border-bottom:1px solid rgba(255,255,255,0.08);">
 
 <h2 style="font-size:42px; margin-bottom:15px;">
-Get Free Web Development Services Consultation in <span class="highlight">Tilak Nagar</span>
+Get Free Web Development Services Consultation in <span class="highlight">Delhi</span>
 </h2>
 
 <p style="max-width:750px;margin:0 auto 35px;font-size:18px;color:#cfcfcf">

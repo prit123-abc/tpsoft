@@ -1,7 +1,12 @@
 @extends('frontend.layouts')
 
-@push('title','SEO Services in Tilak Nagar Delhi | Rank on Google & Maps')
-@push('description','Looking for SEO services in Tilak Nagar? We help businesses in Tilak Nagar, Janakpuri, Uttam Nagar and West Delhi rank on Google Search and Google Maps to generate daily enquiries and customers')
+@push('title','Best SEO Services in Delhi to Grow Your Business Online')
+@push('des','Looking for SEO services in Delhi? We help businesses in Delhi rank on Google Search and Google Maps to generate daily enquiries and customers')
+
+@push('canon')
+{{route('seo-service')}}
+@endpush
+
 @section('content')
 <style>
 
@@ -118,11 +123,13 @@ With continuous SEO improvements and tracking, we ensure long-term ranking, traf
         <h1 class="service-title">Our Service Locations</h1>
         <div class="locations-container">
           @foreach($data as $loc)
+          <a href="{{route('seo-service',$loc->state)}}">
             <div class="location-item">
                 <!-- Rajasthan desert image (file:1) -->
-                <img src="{{asset('storage/'.$loc->state_image)}}" alt="{{$loc->state}}" class="location-img">
+                <img style="height:250px;width:100%;object-fit:cover" src="{{asset('storage/'.$loc->state_image)}}" alt="{{$loc->state}}" class="location-img">
                 <div class="location-label">{{Strtoupper($loc->state)}}</div>
             </div>
+</a>
        @endforeach
         </div>
     </section>
@@ -153,8 +160,8 @@ With continuous SEO improvements and tracking, we ensure long-term ranking, traf
 
         .location-item {
             position: relative;
-            width: 320px;
-            height: 420px;
+                width: 412px;
+    height: 250px;
         }
 
         .location-img {
@@ -188,8 +195,8 @@ With continuous SEO improvements and tracking, we ensure long-term ranking, traf
             }
             
             .location-item {
-                width: 280px;
-                height: 360px;
+               width: 90vw;
+        height: 255px;
             }
         }
     </style>

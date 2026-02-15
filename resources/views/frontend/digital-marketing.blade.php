@@ -29,7 +29,7 @@ p{
 <section class="section " style="padding-top:120px !important;" id="ban">
 <h1  class="hero-title">Digital Marketing Agency 
     <span class="highlight">
-in Tilak Nagar, Delhi
+in Delhi
 
 </span>
 That Brings Real Leads & Customers
@@ -109,8 +109,89 @@ We are a performance marketing agency, which means we measure success through <s
 
 </section>
 
+
 <!-- AREAS -->
 
+<section class="service-section">
+        <h1 class="service-title">Our Service Locations</h1>
+        <div class="locations-container">
+          @foreach($data as $loc)
+            <div class="location-item">
+                <!-- Rajasthan desert image (file:1) -->
+                <img style="height:250px;width:100%;object-fit:cover" src="{{asset('storage/'.$loc->state_image)}}" alt="{{$loc->state}}" class="location-img">
+                <div class="location-label">{{Strtoupper($loc->state)}}</div>
+            </div>
+       @endforeach
+        </div>
+    </section>
+    <style>
+
+        .service-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #6366f1; /* Purple-blue jaise design mein */
+            margin: 0 0 50px 0;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        .locations-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .location-item {
+            position: relative;
+                width: 412px;
+    height: 250px;
+        }
+
+        .location-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5)); /* Heavy shadow jaise design */
+        }
+
+        .location-label {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        @media (max-width: 768px) {
+            .locations-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+            
+            .location-item {
+               width: 90vw;
+        height: 255px;
+            }
+        }
+    </style>
+ 
  
 <section class="section">
 <h2> <span class="highlight">Digital Marketing Agency in Tilak Nagar, West Delhi</span></h2>
