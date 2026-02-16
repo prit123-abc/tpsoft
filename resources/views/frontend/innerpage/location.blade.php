@@ -1,13 +1,21 @@
 @extends('frontend.layouts')
 
-@push('title','Best SEO Services in Delhi to Grow Your Business Online')
-@push('des','Looking for SEO services in Delhi? We help businesses in Delhi rank on Google Search and Google Maps to generate daily enquiries and customers')
-
-@push('canon')
-{{route('seo-service')}}
+@push('title')
+SEO Services in {{ ucwords(str_replace('-', ' ', $location)) }}, {{ ucwords(str_replace('-', ' ', $state)) }}
 @endpush
 
+@push('des')
+Looking for SEO services in {{ ucwords(str_replace('-', ' ', $location)) }}, {{ ucwords(str_replace('-', ' ', $state)) }}? We help businesses rank on Google Search & Maps to generate daily enquiries and customers.
+@endpush
+
+@push('canon')
+{{ url()->current() }}
+@endpush
+
+
 @section('content')
+
+
 <style>
 
 body{font-family:Outfit;background:#070710;color:#fff;overflow-x:hidden}
@@ -37,15 +45,21 @@ p{
 
 <div class="hero-glow"></div>
 
-<h1 class="hero-title">
-Best SEO Services in 
-<span class="highlight">{{ucwords(str_replace('-', ' ', $state))}}</span><br>
-<span style="font-size:48px; opacity:.9;">Rank #1 on Google Search & Maps</span>
+<h1 style="font-size:40px !important;" class="fs-5 hero-title">
+Professional SEO Services in 
+<span class="highlight">
+{{ ucwords(str_replace('-', ' ', $location)) }}, 
+{{ ucwords(str_replace('-', ' ', $state)) }}
+</span><br>
+<span style="font-size:36px; opacity:.9;">
+Rank on Google Search & Maps
+</span>
 </h1>
 
 <p class="hero-sub">
-We help businesses in {{ucwords(str_replace('-', ' ', $state))}} dominate Google Search and Google Maps with high-intent keywords that generate real calls, enquiries, and paying customers.
+We help local businesses in {{ ucwords(str_replace('-', ' ', $location)) }} dominate Google Search and Google Maps with high-intent keywords that generate real calls, enquiries, and paying customers.
 </p>
+
 
 <div class="hero-badges">
     <div class="badge">🚀 High Converting</div>
@@ -148,7 +162,7 @@ We help businesses in {{ucwords(str_replace('-', ' ', $state))}} dominate Google
 
 <!-- SERVICES -->
 <section class="section">
-<h2>Complete SEO Services in {{ ucwords(str_replace('-', ' ', $state)) }}</h2>
+<h2>Complete SEO Services in {{ ucwords(str_replace('-', ' ', $location)) }}</h2>
 
 <div class="cards">
 <div class="card">
@@ -174,19 +188,66 @@ We help businesses in {{ucwords(str_replace('-', ' ', $state))}} dominate Google
 
 </div>
 </section>
+
+
+
+<section class="section">
+<h2>
+Why Choose Our SEO Company in 
+{{ ucwords(str_replace('-', ' ', $location)) }}, 
+{{ ucwords(str_replace('-', ' ', $state)) }}?
+</h2>
+
+<p>
+If you're a business owner in {{ ucwords(str_replace('-', ' ', $location)) }}, you already know how competitive the local market is. 
+Ranking on Google is no longer optional — it’s essential.
+</p>
+
+<p>
+Our SEO experts understand the local search behavior in 
+{{ ucwords(str_replace('-', ' ', $location)) }} and create custom strategies 
+that help you appear for high-intent keywords like:
+</p>
+
+<ul style="margin-top:20px; line-height:2;">
+<li>• Best services near me in {{ ucwords(str_replace('-', ' ', $location)) }}</li>
+<li>• Top company in {{ ucwords(str_replace('-', ' ', $location)) }}</li>
+<li>• Affordable experts in {{ ucwords(str_replace('-', ' ', $location)) }}</li>
+</ul>
+
+<p style="margin-top:20px;">
+We don’t just increase traffic — we increase calls, leads, and revenue.
+</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
 <section class="authority-section">
 <div class="container">
 
 <div class="authority-wrapper">
 
 <div class="authority-left">
-    <h2>
-        # Professional <span class="gradient-text">SEO Company in New Delhi</span> Driving Real Business Growth
-    </h2>
+  <h2>
+# Trusted SEO Company in 
+<span class="gradient-text">
+{{ ucwords(str_replace('-', ' ', $location)) }}
+</span> Driving Real Business Growth
+</h2>
 
-    <p class="authority-subtext">
-        We help local businesses in New Delhi generate consistent leads, higher Google rankings, and long-term organic growth — without wasting money on ads.
-    </p>
+<p class="authority-subtext">
+We help businesses in {{ ucwords(str_replace('-', ' ', $location)) }}, {{ ucwords(str_replace('-', ' ', $state)) }} 
+generate consistent leads, higher Google rankings, and long-term organic growth.
+</p>
+
 
     <div class="benefits-grid">
         <div class="benefit-item">
@@ -345,7 +406,7 @@ Our Proven <span class="highlight">SEO Strategy</span>
     <div class="step-number">01</div>
     <div class="step-content">
         <h3>SEO Audit & Keyword Research</h3>
-        <p>We analyze your website, competitors, and search demand in {{ ucwords(str_replace('-', ' ', $state)) }} to create a powerful ranking blueprint.</p>
+        <p>We analyze your website, competitors, and search demand in {{ ucwords(str_replace('-', ' ', $location)) }} to create a powerful ranking blueprint.</p>
     </div>
 </div>
 
@@ -457,7 +518,8 @@ Our Proven <span class="highlight">SEO Strategy</span>
 <!-- AREAS -->
 
 <!--  -->
-    
+  
+
  
 <section class="locations-section">
   <div style="min-height:10px !important;" class="container">
@@ -541,14 +603,19 @@ background:linear-gradient(90deg,#0b0b18,#11132a);
 border-top:1px solid rgba(255,255,255,0.08);
 border-bottom:1px solid rgba(255,255,255,0.08);">
 
-<h2 style="font-size:42px; margin-bottom:15px;">
-Get Free SEO Consultation in <span class="highlight">{{ ucwords(str_replace('-', ' ', $state)) }}</span>
+<h2>
+Get Free SEO Consultation in 
+<span class="highlight">
+{{ ucwords(str_replace('-', ' ', $location)) }}
+</span>
 </h2>
 
-<p style="max-width:750px;margin:0 auto 35px;font-size:18px;color:#cfcfcf">
-Want more calls, more enquiries, and more customers from Google in {{ ucwords(str_replace('-', ' ', $state)) }}?  
-Talk directly with our SEO experts and get a customized growth strategy for your business.
+<p>
+Want more customers from Google in 
+{{ ucwords(str_replace('-', ' ', $location)) }}, {{ ucwords(str_replace('-', ' ', $state)) }}?
+Let’s build your growth strategy today.
 </p>
+
 
 
 <a href="tel:7599958260" 
