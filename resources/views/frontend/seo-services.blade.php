@@ -203,7 +203,7 @@ With continuous SEO improvements and tracking, we ensure long-term ranking, traf
 
  
 <section class="section">
-<h2><span class="highlight">SEO Services in West Delhi</span></h2>
+<h2><span class="highlight">SEO Services in Delhi</span></h2>
 <p>
 If you are searching for SEO services in Tilak Nagar, we help your business rank on Google Search and Google Maps so customers can find you easily when they search for services near them.
 </p>

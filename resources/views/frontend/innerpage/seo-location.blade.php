@@ -1,11 +1,11 @@
 @extends('frontend.layouts')
 
 @push('title')
-SEO Services in {{ ucwords(str_replace('-', ' ', $location)) }}, {{ ucwords(str_replace('-', ' ', $state)) }}
+{{$page->meta_title}}
 @endpush
 
 @push('des')
-Looking for SEO services in {{ ucwords(str_replace('-', ' ', $location)) }}, {{ ucwords(str_replace('-', ' ', $state)) }}? We help businesses rank on Google Search & Maps to generate daily enquiries and customers.
+{{$page->meta_description}}
 @endpush
 
 @push('canon')
@@ -46,13 +46,13 @@ p{
 <div class="hero-glow"></div>
 
 <h1 style="font-size:40px !important;" class="fs-5 hero-title">
-Professional SEO Services in 
+SEO Service in 
 <span class="highlight">
 {{ ucwords(str_replace('-', ' ', $location)) }}, 
 {{ ucwords(str_replace('-', ' ', $state)) }}
 </span><br>
 <span style="font-size:36px; opacity:.9;">
-Rank on Google Search & Maps
+# Rank on Google Search & Maps
 </span>
 </h1>
 
@@ -130,7 +130,7 @@ We help local businesses in {{ ucwords(str_replace('-', ' ', $location)) }} domi
         <p>Client Retention</p>
     </div>
     <div class="stat">
-        <h2>Top 3</h2>
+        <h2>Top </h2>
         <p>Google Map Rankings</p>
     </div>
     <div class="stat">
@@ -219,14 +219,6 @@ that help you appear for high-intent keywords like:
 We don’t just increase traffic — we increase calls, leads, and revenue.
 </p>
 </section>
-
-
-
-
-
-
-
-
 
 
 
@@ -529,7 +521,7 @@ Our Proven <span class="highlight">SEO Strategy</span>
         </h2>
         <div class="locations-grid">
             @foreach($pages as $page)
-                <a href="{{url()->current()}}/{{$page->location_slug }}" class="location-item">
+                <a href="{{$page->location_slug}}" class="location-item">
                     {{ $page->location_name }}
                 </a>
             @endforeach

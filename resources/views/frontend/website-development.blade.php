@@ -128,12 +128,14 @@ Whether you need a business website, portfolio, or service website — we create
 <section class="service-section">
         <h1 class="service-title">Our Service Locations</h1>
         <div class="locations-container">
-          @foreach($data as $loc)
+           @foreach($data as $loc)
+          <a href="{{route('website-service',$loc->state)}}">
             <div class="location-item">
                 <!-- Rajasthan desert image (file:1) -->
                 <img style="height:250px;width:100%;object-fit:cover" src="{{asset('storage/'.$loc->state_image)}}" alt="{{$loc->state}}" class="location-img">
                 <div class="location-label">{{Strtoupper($loc->state)}}</div>
             </div>
+          </a>
        @endforeach
         </div>
     </section>

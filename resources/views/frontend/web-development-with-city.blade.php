@@ -1,10 +1,10 @@
 @extends('frontend.layouts')
 
-@push('title','Best SEO Services in Delhi to Grow Your Business Online')
-@push('des','Looking for SEO services in Delhi? We help businesses in Delhi rank on Google Search and Google Maps to generate daily enquiries and customers')
+@push('title','Web designing Delhi')
+@push('des','Looking for Web designing in Delhi? We help businesses in Delhi. Check out the Range of services we offer')
 
 @push('canon')
-{{route('seo-service',$state)}}
+{{route('website-service',$state)}}
 @endpush
 
 @section('content')
@@ -38,19 +38,17 @@ p{
 <div class="hero-glow"></div>
 
 <h1 class="hero-title">
-Best SEO Services in 
+Best Web Designing Services in 
 <span class="highlight">{{ucwords(str_replace('-', ' ', $state))}}</span><br>
-<span style="font-size:48px; opacity:.9;">Rank #1 on Google Search & Maps</span>
 </h1>
 
 <p class="hero-sub">
-We help businesses in {{ucwords(str_replace('-', ' ', $state))}} dominate Google Search and Google Maps with high-intent keywords that generate real calls, enquiries, and paying customers.
+{{ucwords(str_replace('-', ' ', $state))}} is a vibrant and competitive region where businesses must stand out online to succeed. our Web Designing Service helps local businesses build a strong digital presence through modern, responsive, and user-friendly websites. 
 </p>
 
 <div class="hero-badges">
-    <div class="badge">🚀 High Converting</div>
-    <div class="badge">📍 Local SEO Experts</div>
-    <div class="badge">⚡ Fast Ranking Strategy</div>
+    <div class="badge">🚀 High Converting pages</div>
+    <div class="badge">📍 SEO Driven Approach</div>
 </div>
 
 </section>
@@ -109,16 +107,13 @@ We help businesses in {{ucwords(str_replace('-', ' ', $state))}} dominate Google
 <div class="stats">
     <div class="stat">
         <h2>150+</h2>
-        <p>Businesses Ranked</p>
+        <p>Websites completed</p>
     </div>
     <div class="stat">
         <h2>95%</h2>
-        <p>Client Retention</p>
+        <p>Client Satisfaction</p>
     </div>
-    <div class="stat">
-        <h2>Top 3</h2>
-        <p>Google Map Rankings</p>
-    </div>
+
     <div class="stat">
         <h2>24/7</h2>
         <p>Support</p>
@@ -148,9 +143,18 @@ We help businesses in {{ucwords(str_replace('-', ' ', $state))}} dominate Google
 
 <!-- SERVICES -->
 <section class="section">
-<h2>Complete SEO Services in {{ ucwords(str_replace('-', ' ', $state)) }}</h2>
+<h2>Complete Web Development Services in {{ ucwords(str_replace('-', ' ', $state)) }}</h2>
 
 <div class="cards">
+    <div class="card">
+      <h3>Web Development</h3>
+      <p>We build modern, responsive, and user-friendly websites that are optimized for performance and search engines.</p>
+    </div>
+    
+    <div class="card">
+      <h3>Custom Software Development</h3>
+      <p>We build custom software solutions that are tailored to your business needs and optimized for performance and scalability.</p>
+    </div>
 <div class="card">
   <h3>Advanced On-Page SEO</h3>
   <p>We optimize your website structure, headings, content, keywords, meta tags, and internal linking to make your website fully search-engine friendly and conversion-focused.</p>
@@ -161,15 +165,6 @@ We help businesses in {{ucwords(str_replace('-', ' ', $state))}} dominate Google
   <p>We fix website errors, improve loading speed, mobile usability, schema markup, indexing issues, and crawlability to boost rankings and user experience.</p>
 </div>
 
-<div class="card">
-  <h3>Local SEO & Google Maps Ranking</h3>
-  <p>We optimize your Google Business Profile to rank your business in the Google 3-Pack and dominate “near me” searches in {{ ucwords(str_replace('-', ' ', $state)) }}.</p>
-</div>
-
-<div class="card">
-  <h3>High-Intent Keyword Targeting</h3>
-  <p>We focus only on keywords that customers are actively searching for — bringing calls, leads, and paying customers to your business.</p>
-</div>
 
 
 </div>
@@ -181,31 +176,30 @@ We help businesses in {{ucwords(str_replace('-', ' ', $state))}} dominate Google
 
 <div class="authority-left">
     <h2>
-        # Professional <span class="gradient-text">SEO Company in New Delhi</span> Driving Real Business Growth
+        # Professional <span class="gradient-text">Web Development Company in New Delhi</span>
     </h2>
 
     <p class="authority-subtext">
-        We help local businesses in New Delhi generate consistent leads, higher Google rankings, and long-term organic growth — without wasting money on ads.
+        We help local businesses in New Delhi build modern, responsive, and user-friendly websites that are optimized for performance and search engines.
     </p>
 
     <div class="benefits-grid">
         <div class="benefit-item">
-            ✓ Rank on Page 1 for High-Intent Keywords
+            ✓ Build Modern, Responsive Websites
         </div>
         <div class="benefit-item">
-            ✓ Dominate Google Maps & Local Search
+            ✓ Optimize for Performance and Search Engines
         </div>
         <div class="benefit-item">
             ✓ Increase Website Traffic & Calls
         </div>
         <div class="benefit-item">
-            ✓ Transparent Monthly Reporting
+            ✓ Custom Software Solutions
         </div>
     </div>
 
     <div class="cta-group">
-        <a href="#contact" class="primary-btn">Get Free SEO Strategy</a>
-        <span class="mini-trust">No long-term contracts • Results-focused approach</span>
+        <a href="#contact" class="primary-btn">Get Free Software Development Consultation</a>
     </div>
 </div>
 
@@ -336,7 +330,7 @@ We help businesses in {{ucwords(str_replace('-', ' ', $state))}} dominate Google
 <section class="section strategy-section">
 
 <h2 class="strategy-title">
-Our Proven <span class="highlight">SEO Strategy</span>
+Our Proven <span class="highlight">Web Development Strategy</span>
 </h2>
 
 <div class="strategy-wrapper">
@@ -344,32 +338,28 @@ Our Proven <span class="highlight">SEO Strategy</span>
 <div class="strategy-step">
     <div class="step-number">01</div>
     <div class="step-content">
-        <h3>SEO Audit & Keyword Research</h3>
-        <p>We analyze your website, competitors, and search demand in {{ ucwords(str_replace('-', ' ', $state)) }} to create a powerful ranking blueprint.</p>
+        <h3>Requirement discussion & business understanding</h3>
     </div>
 </div>
 
 <div class="strategy-step">
     <div class="step-number">02</div>
     <div class="step-content">
-        <h3>On-Page & Technical Optimization</h3>
-        <p>We optimize structure, content, speed, schema, and indexing to make your website Google-ready.</p>
+        <h3>Website design layout & structure planning</h3>
     </div>
 </div>
 
 <div class="strategy-step">
     <div class="step-number">03</div>
     <div class="step-content">
-        <h3>Local SEO & Google Maps Growth</h3>
-        <p>We improve your Google Business Profile to dominate local searches and appear in the 3-pack results.</p>
+        <h3>Development with SEO & speed optimization</h3>
     </div>
 </div>
 
 <div class="strategy-step">
     <div class="step-number">04</div>
     <div class="step-content">
-        <h3>Authority Building & Monthly Scaling</h3>
-        <p>We build backlinks, improve content authority, and continuously optimize for long-term ranking growth.</p>
+        <h3>Testing, launch & support</h3>
     </div>
 </div>
 
@@ -542,12 +532,12 @@ border-top:1px solid rgba(255,255,255,0.08);
 border-bottom:1px solid rgba(255,255,255,0.08);">
 
 <h2 style="font-size:42px; margin-bottom:15px;">
-Get Free SEO Consultation in <span class="highlight">{{ ucwords(str_replace('-', ' ', $state)) }}</span>
+Get Free Web Development Consultation in <span class="highlight">{{ ucwords(str_replace('-', ' ', $state)) }}</span>
 </h2>
 
 <p style="max-width:750px;margin:0 auto 35px;font-size:18px;color:#cfcfcf">
 Want more calls, more enquiries, and more customers from Google in {{ ucwords(str_replace('-', ' ', $state)) }}?  
-Talk directly with our SEO experts and get a customized growth strategy for your business.
+Check Out our SEO Services to get a customized growth strategy for your business.
 </p>
 
 

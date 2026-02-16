@@ -1,13 +1,21 @@
 @extends('frontend.layouts')
 
-@push('title','Best SEO Services in Delhi to Grow Your Business Online')
-@push('des','Looking for SEO services in Delhi? We help businesses in Delhi rank on Google Search and Google Maps to generate daily enquiries and customers')
-
-@push('canon')
-{{route('seo-service',$state)}}
+@push('title')
+{{$page->meta_title}}
 @endpush
 
+@push('des')
+{{$page->meta_description}}
+@endpush
+
+@push('canon')
+{{ url()->current() }}
+@endpush
+
+
 @section('content')
+
+
 <style>
 
 body{font-family:Outfit;background:#070710;color:#fff;overflow-x:hidden}
@@ -37,20 +45,24 @@ p{
 
 <div class="hero-glow"></div>
 
-<h1 class="hero-title">
-Best SEO Services in 
-<span class="highlight">{{ucwords(str_replace('-', ' ', $state))}}</span><br>
-<span style="font-size:48px; opacity:.9;">Rank #1 on Google Search & Maps</span>
+<h1 style="font-size:40px !important;" class="fs-5 hero-title">
+Web Development in 
+<span class="highlight">
+{{ ucwords(str_replace('-', ' ', $location)) }}, 
+{{ ucwords(str_replace('-', ' ', $state)) }}
+</span><br>
+ 
 </h1>
 
 <p class="hero-sub">
-We help businesses in {{ucwords(str_replace('-', ' ', $state))}} dominate Google Search and Google Maps with high-intent keywords that generate real calls, enquiries, and paying customers.
+Website Development in {{ ucwords(str_replace('-', ' ', $location)) }} – Expert web development services in {{ ucwords(str_replace('-', ' ', $location)) }} for business and e-commerce websites.
 </p>
 
+
 <div class="hero-badges">
-    <div class="badge">🚀 High Converting</div>
-    <div class="badge">📍 Local SEO Experts</div>
-    <div class="badge">⚡ Fast Ranking Strategy</div>
+    <div class="badge">🚀 High Converting Pages</div>
+    <div class="badge">📍 SEO Optimized</div>
+    <div class="badge">⚡ Fast Loading</div>
 </div>
 
 </section>
@@ -109,15 +121,15 @@ We help businesses in {{ucwords(str_replace('-', ' ', $state))}} dominate Google
 <div class="stats">
     <div class="stat">
         <h2>150+</h2>
-        <p>Businesses Ranked</p>
+        <p>Websites Developed</p>
     </div>
     <div class="stat">
         <h2>95%</h2>
         <p>Client Retention</p>
     </div>
     <div class="stat">
-        <h2>Top 3</h2>
-        <p>Google Map Rankings</p>
+            <h2>Top </h2>
+            <p>Google Map Rankings</p>
     </div>
     <div class="stat">
         <h2>24/7</h2>
@@ -148,72 +160,103 @@ We help businesses in {{ucwords(str_replace('-', ' ', $state))}} dominate Google
 
 <!-- SERVICES -->
 <section class="section">
-<h2>Complete SEO Services in {{ ucwords(str_replace('-', ' ', $state)) }}</h2>
+<h2>Complete Web Development Services in {{ ucwords(str_replace('-', ' ', $location)) }}</h2>
 
 <div class="cards">
 <div class="card">
-  <h3>Advanced On-Page SEO</h3>
-  <p>We optimize your website structure, headings, content, keywords, meta tags, and internal linking to make your website fully search-engine friendly and conversion-focused.</p>
+  <h3>Advanced Web Development</h3>
+  <p>We build fast, secure, and scalable websites tailored to your business needs in {{ ucwords(str_replace('-', ' ', $location)) }}.</p>
 </div>
 
 <div class="card">
-  <h3>Technical SEO & Core Web Vitals</h3>
+  <h3>Technical Web Development</h3>
   <p>We fix website errors, improve loading speed, mobile usability, schema markup, indexing issues, and crawlability to boost rankings and user experience.</p>
 </div>
 
 <div class="card">
-  <h3>Local SEO & Google Maps Ranking</h3>
-  <p>We optimize your Google Business Profile to rank your business in the Google 3-Pack and dominate “near me” searches in {{ ucwords(str_replace('-', ' ', $state)) }}.</p>
+  <h3>Local Business Web Development</h3>
+  <p>We build websites that help local businesses in {{ ucwords(str_replace('-', ' ', $location)) }} get found on Google and attract more customers.</p>
 </div>
 
-<div class="card">
-  <h3>High-Intent Keyword Targeting</h3>
-  <p>We focus only on keywords that customers are actively searching for — bringing calls, leads, and paying customers to your business.</p>
-</div>
+ 
 
 
 </div>
 </section>
+
+
+
+<section class="section">
+<h2>
+Why Choose Us in 
+{{ ucwords(str_replace('-', ' ', $location)) }}, 
+{{ ucwords(str_replace('-', ' ', $state)) }}?
+</h2>
+
+<p>
+If you're a business owner in {{ ucwords(str_replace('-', ' ', $location)) }}, you already know how competitive the local market is. 
+Ranking on Google is no longer optional — it’s essential.
+</p>
+
+<p>
+Our SEO experts understand the local search behavior in 
+{{ ucwords(str_replace('-', ' ', $location)) }} and create custom strategies 
+that help you appear for high-intent keywords like:
+</p>
+
+<ul style="margin-top:20px; line-height:2;">
+<li>• Best services near me in {{ ucwords(str_replace('-', ' ', $location)) }}</li>
+<li>• Top company in {{ ucwords(str_replace('-', ' ', $location)) }}</li>
+<li>• Affordable experts in {{ ucwords(str_replace('-', ' ', $location)) }}</li>
+</ul>
+
+<p style="margin-top:20px;">
+We don’t just Create websites We increase traffic — we increase calls, leads, and revenue.
+</p>
+</section>
+
+
+
 <section class="authority-section">
 <div class="container">
 
 <div class="authority-wrapper">
 
 <div class="authority-left">
-    <h2>
-        # Professional <span class="gradient-text">SEO Company in New Delhi</span> Driving Real Business Growth
-    </h2>
+  <h2>
+# Trusted Web Development Company in 
+<span class="gradient-text">
+{{ ucwords(str_replace('-', ' ', $location)) }}
+</span> 
+</h2>
 
-    <p class="authority-subtext">
-        We help local businesses in New Delhi generate consistent leads, higher Google rankings, and long-term organic growth — without wasting money on ads.
-    </p>
+<p class="authority-subtext">
+We help businesses in {{ ucwords(str_replace('-', ' ', $location)) }}, {{ ucwords(str_replace('-', ' ', $state)) }} 
+build websites that rank higher on Google and attract more customers.
+</p>
+
 
     <div class="benefits-grid">
         <div class="benefit-item">
-            ✓ Rank on Page 1 for High-Intent Keywords
+            ✓ Rank on Google for High-Intent Keywords
         </div>
-        <div class="benefit-item">
-            ✓ Dominate Google Maps & Local Search
-        </div>
+    
         <div class="benefit-item">
             ✓ Increase Website Traffic & Calls
         </div>
-        <div class="benefit-item">
-            ✓ Transparent Monthly Reporting
-        </div>
+         
     </div>
 
     <div class="cta-group">
-        <a href="#contact" class="primary-btn">Get Free SEO Strategy</a>
-        <span class="mini-trust">No long-term contracts • Results-focused approach</span>
-    </div>
+        <a href="#contact" class="primary-btn">Get Free Web Development Consultation</a>
+     </div>
 </div>
 
 <div class="authority-right">
     <div class="stats-card">
         <div class="stat">
             <h3>150+</h3>
-            <p>Businesses Optimized</p>
+            <p>Websites Built</p>
         </div>
         <div class="stat">
             <h3>95%</h3>
@@ -336,7 +379,7 @@ We help businesses in {{ucwords(str_replace('-', ' ', $state))}} dominate Google
 <section class="section strategy-section">
 
 <h2 class="strategy-title">
-Our Proven <span class="highlight">SEO Strategy</span>
+Our Proven <span class="highlight">Web Development Strategy</span>
 </h2>
 
 <div class="strategy-wrapper">
@@ -344,32 +387,28 @@ Our Proven <span class="highlight">SEO Strategy</span>
 <div class="strategy-step">
     <div class="step-number">01</div>
     <div class="step-content">
-        <h3>SEO Audit & Keyword Research</h3>
-        <p>We analyze your website, competitors, and search demand in {{ ucwords(str_replace('-', ' ', $state)) }} to create a powerful ranking blueprint.</p>
+        <h3>Requirement discussion & business understanding</h3>
     </div>
 </div>
 
 <div class="strategy-step">
     <div class="step-number">02</div>
     <div class="step-content">
-        <h3>On-Page & Technical Optimization</h3>
-        <p>We optimize structure, content, speed, schema, and indexing to make your website Google-ready.</p>
+        <h3>Website design layout & structure planning</h3>
     </div>
 </div>
 
 <div class="strategy-step">
     <div class="step-number">03</div>
     <div class="step-content">
-        <h3>Local SEO & Google Maps Growth</h3>
-        <p>We improve your Google Business Profile to dominate local searches and appear in the 3-pack results.</p>
+        <h3>Development with SEO & speed optimization</h3>
     </div>
 </div>
 
 <div class="strategy-step">
     <div class="step-number">04</div>
     <div class="step-content">
-        <h3>Authority Building & Monthly Scaling</h3>
-        <p>We build backlinks, improve content authority, and continuously optimize for long-term ranking growth.</p>
+        <h3>Testing, launch & support</h3>
     </div>
 </div>
 
@@ -457,7 +496,8 @@ Our Proven <span class="highlight">SEO Strategy</span>
 <!-- AREAS -->
 
 <!--  -->
-    
+  
+
  
 <section class="locations-section">
   <div style="min-height:10px !important;" class="container">
@@ -467,7 +507,7 @@ Our Proven <span class="highlight">SEO Strategy</span>
         </h2>
         <div class="locations-grid">
             @foreach($pages as $page)
-                <a href="{{url()->current()}}/{{$page->location_slug }}" class="location-item">
+                <a href="{{$page->location_slug}}" class="location-item">
                     {{ $page->location_name }}
                 </a>
             @endforeach
@@ -541,14 +581,19 @@ background:linear-gradient(90deg,#0b0b18,#11132a);
 border-top:1px solid rgba(255,255,255,0.08);
 border-bottom:1px solid rgba(255,255,255,0.08);">
 
-<h2 style="font-size:42px; margin-bottom:15px;">
-Get Free SEO Consultation in <span class="highlight">{{ ucwords(str_replace('-', ' ', $state)) }}</span>
+<h2>
+Get Free SEO Consultation in 
+<span class="highlight">
+{{ ucwords(str_replace('-', ' ', $location)) }}
+</span>
 </h2>
 
-<p style="max-width:750px;margin:0 auto 35px;font-size:18px;color:#cfcfcf">
-Want more calls, more enquiries, and more customers from Google in {{ ucwords(str_replace('-', ' ', $state)) }}?  
-Talk directly with our SEO experts and get a customized growth strategy for your business.
+<p>
+Want more customers from Google in 
+{{ ucwords(str_replace('-', ' ', $location)) }}, {{ ucwords(str_replace('-', ' ', $state)) }}?
+Let’s build your growth strategy today.
 </p>
+
 
 
 <a href="tel:7599958260" 
