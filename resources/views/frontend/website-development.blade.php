@@ -13,7 +13,7 @@ body{font-family:Outfit;background:#070710;color:#fff;overflow-x:hidden}
 .section{padding:70px 8%; }
    #ban{
 
-       background:url('images/digital-marketing.webp');background-size:cover;background-position:center}
+       background:url('images/web-dev-ban.webp');background-size:cover;background-position:center}
    
 .hero-title{font-size:54px;line-height:1.1}
 .highlight{background:linear-gradient(90deg,#00f0ff,#ff00d4);-webkit-background-clip:text;color:transparent}
